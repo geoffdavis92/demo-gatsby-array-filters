@@ -1,47 +1,47 @@
 query AllCharactersQuery {
-	allDataJson(sort: { fields: [published], order: ASC }) {
-		edges {
-			node {
-				title
-				characters {
-					name
-					role
-				}
-			}
-		}
-	}
+  allDataJson(sort: { fields: [published], order: ASC }) {
+    edges {
+      node {
+        title
+        characters {
+          name
+          role
+        }
+      }
+    }
+  }
 }
 
 query FellowshipQuery {
-	allDataJson(filter: { title: { eq: "The Fellowship of the Ring" } }) {
-		edges {
-			node {
-				title
-				author
-				published
-				series
-				characters {
-					name
-					role
-				}
-			}
-		}
-	}
+  allDataJson(filter: { title: { eq: "The Fellowship of the Ring" } }) {
+    edges {
+      node {
+        title
+        author
+        published
+        series
+        characters {
+          name
+          role
+        }
+      }
+    }
+  }
 }
 
 query GatsbyQuery {
-	allDataJson(filter: { title: { eq: "The Great Gatsby" } }) {
-		edges {
-			node {
-				title
-				author
-				published
-				series
-				characters {
-					name
-					role
-				}
-			}
-		}
-	}
+  allDataJson(filter: { title: { eq: "The Great Gatsby" } }) {
+    edges {
+      node {
+        title
+        author
+        published
+        series
+        characters {
+          name
+          role
+        }
+      }
+    }
+  }
 }
