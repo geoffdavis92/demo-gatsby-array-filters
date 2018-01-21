@@ -1,0 +1,20 @@
+{
+	"title": "The Great Gatsby",
+	"author": "F. Scott Fitzgerald",
+	"published": "1925",
+	"series": null,
+	"characters": [
+		{
+			"name": "Nick Carraway",
+			"role": "bond salesman"
+		},
+		{
+			"name": "Jay Gatsby",
+			"role": "millionaire"
+		},
+		{
+			"name": "Daisy Buchanan",
+			"role": "socialite"
+		}
+	]
+}

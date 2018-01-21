@@ -1,0 +1,49 @@
+# (This query will not work)
+
+# It would be great if we could have arguments on node fields
+# that return arrays, like there are arguments on *Connection
+# types.
+
+query MainCharactersQuery {
+	allDataJson(sort: { fields: [published], order: ASC }) {
+		edges {
+			node {
+				title
+				# Allow sort/skip/limit/filter arguments like
+				# *Connection types.
+				# Expose necessary meta fields like __index
+				# or add something similar to the following
+				# `index` argument
+				characters(sort: { fields: [__index], order: ASC }) {
+					name
+					role
+				}
+				# The following fields' arguments have to do
+				# with retrieving specific array elements by
+				# index or contents.
+
+				# Allows a single index to be returned
+				characters(index: 0) {
+					name
+					role
+				}
+				# Allows users to specify an array of
+				# one or more indicies to display.
+				# Perhaps allow index wrapping i.e. passing -1
+				# as an index indicating the last element of
+				# the array?
+				characters(index: [0, 1]) {
+					name
+					role
+				}
+				# This would copy the type of filter available
+				# in *Connection types, but be exposed directly
+				# on the node field itself
+				characters(in: { name: { eq: "Frodo Baggins" } }) {
+					name
+					role
+				}
+			}
+		}
+	}
+}
