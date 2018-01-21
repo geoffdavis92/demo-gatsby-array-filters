@@ -13,10 +13,10 @@ Those existing arguments could be modified to support array-specific needs, like
 
 `characters(sort: { fields: [__index], order: ASC }, limit: 2)`
 
-New arguments could also be created to simplify filtering arrays and/or return specific indicies:
+New arguments could also be created to simplify filtering arrays and/or return specific indices:
 
 - `in`: identicle to how this is used in the `*Connection` argument `filter`, except it is applied directly onto the array-returning field (e.g. `characters(in: {name: {eq: "Frodo Baggins"}})`)
-- `index`: allow retrieval of specific indicies by passing them to `index` in an array (e.g. `characters(index: [0, 1])`, `characters(index: [2])`, `characters(index: [-1])`)
+- `index`: allow retrieval of specific indices by passing them to `index` in an array (e.g. `characters(index: [0, 1])`, `characters(index: [2])`, `characters(index: [-1])`)
 
 ## Getting Started
 

@@ -28,7 +28,7 @@ query MainCharactersQuery {
           role
         }
         # Allows users to specify an array of
-        # one or more indicies to display.
+        # one or more indices to display.
         # Perhaps allow index wrapping i.e. passing -1
         # as an index indicating the last element of
         # the array?
